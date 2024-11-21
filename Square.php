@@ -1,10 +1,15 @@
 <?php
-require_once 'Resizeable.php';
-class Square implements Resizeable
+include_once("./Colorable.php");
+include_once('Rectangle.php');
+
+class Square extends Rectangle implements Colorable
 {
-    public function resize(float $percent)
+    public function __construct($name, $width)
     {
-        $ran = rand(1, 100);
-        echo ("resize: " . ($percent * $ran));
+        parent::__construct($name, $width, $width, $width);
+    }
+    public function howToColor()
+    {
+        echo ("Color all four sides.");
     }
 }

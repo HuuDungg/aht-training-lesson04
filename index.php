@@ -1,14 +1,10 @@
 <?php
-include './Circle.php';
-include_once './Rectangle.php';
-include_once './Square.php';
+include_once("./Rectangle.php");
+include_once("./Shape.php");
+include_once("./Square.php");
 
-$r = new Rectangle();
-$r->resize(123);
+$sh = new Shape("circle");
+$s = new Square("HuuDung", 200000);
+$r = new Rectangle("Hihi", 231, 3912);
 
-
-$r = new Circle();
-$r->resize(123);
-
-$r = new Square();
-$r->resize(123);
+$bubu = [$sh, $s, $r];
